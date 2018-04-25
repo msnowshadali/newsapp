@@ -7,7 +7,7 @@ export class AuthService {
   users:string[] = ['john','lilly'];
 
   getFirstUser(){
-    return window.profileId;
+    //return window.profileId;
   }
 
   
