@@ -5,7 +5,8 @@
     text-align:center;
     background: #ffffff;
     margin-top:200px;
-    box-shadow: 0px 0px 26px -6px #000000;
+    box-shadow: 0px 0px 7px -3px #000000;
+    border-radius: 3px;
 }
 
 .buttonWrapper{

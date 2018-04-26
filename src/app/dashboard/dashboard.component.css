@@ -32,6 +32,7 @@ h4{
 
 .newsMainContainer{
     display: flex;
+    margin-top:80px;
 }
 .newsArticalContainer{
     display: block;
@@ -81,4 +82,20 @@ li.articlePublishDetails {
 
 li.articleTitle {
     font-size: 22px;
+}
+
+
+.header{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #ffffff;
+  }
+.logo { text-align: center; }
+
+.stickyheader{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 0px 7px -3px #000000;
 }

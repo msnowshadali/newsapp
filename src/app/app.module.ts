@@ -11,8 +11,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service'
 
 const appRoutes : Routes = [
-  { path:'dashboard', component:DashboardComponent },
-  { path:'login', component:LoginComponent }
+  {
+    path:'dashboard',
+    component:DashboardComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  { path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  }
 ]
 
 @NgModule({

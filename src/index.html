@@ -8,19 +8,9 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="821905500436-di0qml19bemmcmfne1poegemgqf4dffh.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  
 </head>
 <body>
   <app-root></app-root>
 </body>
-<script>
-  function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  window.profileId = profile.getId();
-  window.profileName = profile.getName();
-  window.profileImage = profile.getImageUrl();
-  window.profileEmail = profile.getEmail();
-}
-</script>
-
 </html>
