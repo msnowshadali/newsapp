@@ -1,14 +1,60 @@
 .loginContainer{
     width: 400px;
     margin: 0 auto;
-    height: 200px;
     text-align:center;
     background: #ffffff;
     margin-top:200px;
     box-shadow: 0px 0px 7px -3px #000000;
     border-radius: 3px;
+    background: url("../../assets/images/loginBackground.jpg");
 }
-
+.userText{
+    font-weight: 500;
+    margin: 25px;
+    color: #ffffff;
+    font-size: 30px;
+}
 .buttonWrapper{
     width: 200px;
+}
+
+.loginToubleLink{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4084f5;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#signin-button{
+    background: #4185f4;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+#signin-button span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 4px 21px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.googleUser{
+    width: 100px;
+    border-radius: 100%;
+    margin-top: 100px;
+    border: 5px solid #ffffff;
+}
+
+.googleLogo{
+    background: #ffffff;
+    border-radius: 3px;
+    width: 20px;
+    padding: 5px;
+    float: left;
 }

@@ -1,3 +1,7 @@
 <div class="loginContainer">
-  <button id="signin-button"> Sign in</button>
+  <img src="{{ userImage ? userImage : '../assets/images/userImage.jpg' }}" class="googleUser" alt="User Image">
+  <p class="userText">Hello ! {{userImage}}</p>
+  <button id="signin-button"><img class="googleLogo" src="../assets/images/google-icon.svg"/><span>Sign in with Google</span> </button>
 </div>
+
+<a href="javascript:void(0);" class="loginToubleLink">Having trouble logging ?</a>

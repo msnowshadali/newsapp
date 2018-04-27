@@ -7,13 +7,14 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user:string;
+  userName:string;
+  profileImage : string;
   constructor(private AuthService:AuthService) {
   }
 
   ngOnInit() {
     //this.user = this.AuthService.getFirstUser();
-    console.log(this.user);
+    //console.log(this.user);
     initClient();
     checkIfSignedIn();
   }
@@ -24,9 +25,12 @@ function checkIfSignedIn() {
   }
 }
 
+let userImage:String = (localStorage.getItem('userImage') ? localStorage.getItem('userImage') : null );
+
+
   
 function initClient() {
-  
+  self = this;
   function onSuccess(user : any) {
     localStorage.setItem("userId", user.getBasicProfile().getId());
     localStorage.setItem("userName", user.getBasicProfile().getName());

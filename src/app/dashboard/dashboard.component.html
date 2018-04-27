@@ -1,8 +1,15 @@
 <div class="stickyheader">
   <div class="header">
-    <div class="a"><a href="#">Hi, Noushad Ali</a></div>
-    <div class="logo"><a href="#">Some title centered</a></div>
-    <div class="c"><button (click)="logout()">Logout</button></div>
+    
+    <div class="logo">News Technology Service</div>
+    <div class="logoutButton"><button >Test </button></div>
+    <div class="userName">
+      <button>Hi, {{userName}}</button>
+      <ul class="profileMenu">
+        <li>Profile</li>
+        <li (click)="logout()">Logout</li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -16,7 +23,7 @@
     
     <div class="newsArticleContainer">
 
-      <h2>Your viewing the news of {{chosenCountry.country}} </h2>
+      <h2 class="selectedNewsHeadLine">Your viewing the news of {{chosenCountry.country}} </h2>
     <ul class="newsContainer">
     <li *ngFor="let article of articles" class="newsArticalContainer">
          <a href="{{article.url}}" class="newsLink">
