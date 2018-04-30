@@ -43,9 +43,6 @@ table {
 	border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
 body,html{
     font-family: 'Montserrat', sans-serif;
 	background: #f4f8fb;
