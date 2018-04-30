@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { environment } from '../../environments/environment';
+import { gapi } from '../../../src/platform.js';
 
 @Component({
   selector: 'app-login',
@@ -7,30 +9,19 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  userName:string;
-  profileImage : string;
-  constructor(private AuthService:AuthService) {
-  }
-
-  ngOnInit() {
-    //this.user = this.AuthService.getFirstUser();
-    //console.log(this.user);
-    initClient();
-    checkIfSignedIn();
-  }
+  constructor(private AuthService:AuthService) {  }
   
-function checkIfSignedIn() {
+checkIfSignedIn(){
   if(localStorage.getItem("userId")){
     window.location.href="/dashboard"
   }
 }
 
-let userImage:String = (localStorage.getItem('userImage') ? localStorage.getItem('userImage') : null );
-
-
+userImage:string = localStorage.getItem('userImage') ? localStorage.getItem('userImage') : null ;
+userName:string = localStorage.getItem('userName') ? localStorage.getItem('userName') : null ;
   
-function initClient() {
-  self = this;
+initClient(){
+  let self = this;
   function onSuccess(user : any) {
     localStorage.setItem("userId", user.getBasicProfile().getId());
     localStorage.setItem("userName", user.getBasicProfile().getName());
@@ -44,7 +35,7 @@ function initClient() {
     console.log('Signed in as ' + user.getBasicProfile().getFamilyName());
     console.log('Signed in as ' + user.getBasicProfile().getImageUrl());
     console.log('Signed in as ' + user.getBasicProfile().getEmail());
-    checkIfSignedIn();
+    self.checkIfSignedIn();
   };
   
   function onFailure(error : any) {
@@ -53,10 +44,15 @@ function initClient() {
 
     gapi.load('auth2', function(){
         let auth2: any= gapi.auth2.init({
-            client_id: '821905500436-di0qml19bemmcmfne1poegemgqf4dffh.apps.googleusercontent.com'
+            client_id: environment.googleAuthApiKey+'.apps.googleusercontent.com'
         });
         auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
     });
-};
+}
+
+ngOnInit(){
+  this.initClient();
+  this.checkIfSignedIn();
+}
 
 }

@@ -1,3 +1,153 @@
+.dashboardContainer{
+    margin-top: 60px;
+    height: 100%;
+}
+
+.leftNavigation{
+    height: 100%;
+    background: #ffffff;
+    width: 70px;
+    position: fixed;
+    /*border-right: 1px solid #ececec;*/
+    box-shadow: 1px 1px 4px -3px #000000;
+}
+
+.leftNavigation ul li{
+    padding: 22px;
+    cursor: pointer;
+}
+
+.userProfileOption img{
+    border-radius: 100%;
+    width: 40px;
+}
+
+.userProfileOption{
+    padding: 16px !important;
+    position: absolute;
+    bottom: 60px;
+}
+
+.leftNavigation ul li:hover{
+    background: #ececec;
+}
+
+.rightContentHolder{
+
+}
+
+.rightContainer {
+    padding: 15px 15px 0px 85px;
+}
+
+.stockNameHolder{
+    display: block;
+    padding: 30px;
+}
+
+.chartDisplay li{
+    display: inline-block;
+    margin: 38px;
+    padding-right: 30px;
+    border-right: 1px solid #CCCCCC;
+}
+
+.chartDisplay li:last-child{
+    padding-right: 0;
+    border-right:none;
+}
+
+.chartDisplay h1{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chartDisplay.status h2{
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.chartDisplay li h3{
+    font-size: 26px;
+}
+
+.chartDisplay li .stockPriceDate{
+    font-size: 12px;
+}
+
+.chartDisplay li span{
+    float: right;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.OpeningStock span{
+
+}
+
+.LowestStock span{
+
+}
+
+.HighestStock span{
+
+}
+
+.ClosingStock span{
+
+}
+
+.userProfileOption .material-icons{
+    display: none
+}
+
+.userProfileOption:hover .material-icons{
+    display: block;
+    font-size: 27px;
+    position: absolute;
+    color: #ffffff;
+    background: black;
+    border-radius: 100%;
+    padding: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .newsContainer, .newsArticalContainer, .articleContent{
     margin: 0;
     padding: 0px;
@@ -7,27 +157,6 @@
    
 }
 
-ul.profileMenu{
-    position: absolute;
-    width: 100%;
-    background: #eaecef;
-    display:none;
-}
-
-.userName:hover > ul.profileMenu{
-    display: block;
-}
-
-ul.profileMenu li {
-    font-size: 14px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-ul.profileMenu li:hover{
-    background: #cccccc;
-    color: #ffffff;
-}
 
 .userName strong{
     font-weight: 500;
@@ -35,6 +164,7 @@ ul.profileMenu li:hover{
 
 .userName{
     position: relative;
+    font-size: 14px;
     
 }
 
@@ -119,6 +249,20 @@ div.articleContent{
 
 }
 
+.chartDisplay.status{
+    height: 100px;
+}
+
+.chartDisplay{
+    height: 250px;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+
+
 .articleContent{
 }
 
@@ -154,15 +298,19 @@ li.articleTitle {
 .header{ 
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px 40px 20px 25px;
     background: #ffffff;
   }
-.logo { text-align: center;
-font-weight: 700;}
+.logo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
 
 .stickyheader{
     position:fixed;
     width: 100%;
     top: 0;
     box-shadow: 0px 0px 7px -3px #000000;
+    /*border-bottom: 1px solid #ececec;*/
 }

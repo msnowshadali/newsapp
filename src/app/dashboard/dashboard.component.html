@@ -2,18 +2,80 @@
   <div class="header">
     
     <div class="logo">News Technology Service</div>
-    <div class="logoutButton"><button >Test </button></div>
+    <div class="logoutButton">
+      <!-- <button >Test </button> -->
+    </div>
     <div class="userName">
-      <button>Hi, {{userName}}</button>
-      <ul class="profileMenu">
-        <li>Profile</li>
-        <li (click)="logout()">Logout</li>
-      </ul>
+      <button>Hello, {{userName}}</button>
     </div>
   </div>
 </div>
 
-<div class="newsMainContainer">
+<div class="dashboardContainer">
+  <div class="leftNavigation">
+    <ul>
+      <li><i class="material-icons">home</i></li>
+      <li><i class="material-icons">developer_board</i></li>
+      <li><i class="material-icons">person_pin</i></li>
+      <li><i class="material-icons">library_books</i></li>
+      <li><i class="material-icons">euro_symbol</i></li>
+      <li><i class="material-icons">settings</i></li>
+      <li class="userProfileOption">
+          <i class="material-icons" (click)="logout()">power_settings_new</i>
+          <img src="{{userImage}}"></li>
+    </ul>
+  </div>
+  <div class="rightContainer">
+    <div class="rightContentHolder">
+      
+      <div class="chartDisplay status">
+          <div class="stockNameHolder">
+            <h1>Stock Participant </h1>
+            <h2>Microsoft Corporation</h2>
+          </div>
+          <ul>
+            <li>
+            <h3 class="OpeningStock">Opening <span>99.887</span></h3>
+            </li>
+            <li>
+            <h3 class="LowestStock">Lowest <span>99.887</span></h3>
+            </li>
+            <li>
+            <h3 class="HighestStock">Highest <span>99.887</span></h3>
+          </li>
+          <li>
+            <h3 class="ClosingStock">Closing <span>99.887</span></h3>
+          </li>
+          <!-- <li>
+            <div class="myPieChart">
+                <canvas id="myPieChart"></canvas>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="chartDisplay">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="newsMainContainer">
     <div class="contryContainer">
       <h4>Choose country</h4>
         <ul>
@@ -42,5 +104,5 @@
     </ul>
   </div>
 
-</div>
+</div> -->
 

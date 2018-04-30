@@ -48,7 +48,8 @@ table {
 
 body,html{
     font-family: 'Montserrat', sans-serif;
-    background: #f4f8fb;
+	background: #f4f8fb;
+	height: 100%;
 }
 
 .material-icons {

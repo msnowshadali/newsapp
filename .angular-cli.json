@@ -21,7 +21,7 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": ["platform.js"],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
