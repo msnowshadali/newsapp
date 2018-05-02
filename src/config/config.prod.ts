@@ -1,4 +1,4 @@
-export const configuration = {
+export const config = {
   production: false,
   alphaApiKey:'E1ILHV2EOEVWOTFF',
   newsApiKey:'3ecae5441e034c17aa0eef816042c12a',
