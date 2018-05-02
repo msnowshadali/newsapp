@@ -52,9 +52,26 @@
     border-right: 1px solid #CCCCCC;
 }
 
+.sharePriceDisplay ul li{
+    display: block;
+    border-right:none;
+    margin: 20px;
+}
 .chartDisplay li:last-child{
     padding-right: 0;
     border-right:none;
+}
+
+.sharePriceDisplay .sharePriceHolder h1{
+    margin: 20px;
+}
+
+.sharePriceDisplay .sharePriceHolder .arrow{
+    vertical-align: middle;
+}
+
+.chartDisplay.sharePriceDisplay{
+    height: auto;
 }
 
 .chartDisplay h1{
@@ -112,41 +129,9 @@
     padding: 7px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sharePriceHolder ul.stockNews li{
+    margin: 0px;
+}
 
 .newsContainer, .newsArticalContainer, .articleContent{
     margin: 0;
@@ -155,6 +140,10 @@
 
 .newsContainer{
    
+}
+
+#otherSharesHolder, #otherShares{
+    height: 270px;
 }
 
 
@@ -172,13 +161,10 @@
     font-family: inherit;
     font-size: inherit;
     border: none;
-}
-
-.userName button::after{
-    content: "\E5C5";
-    font-family: 'Material Icons';
-    font-size: 20px;
-    position: absolute;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 100px;
+    padding: 3px 14px;
 }
 
 h4{
