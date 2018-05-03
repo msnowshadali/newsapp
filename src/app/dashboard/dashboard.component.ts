@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 import { DatePipe } from '@angular/common';
 import { Utils } from '../common';
-import { environment } from '../../environments/environment';
+import { config } from '../../config/config';
 import { gapi } from '../../../src/platform.js';
 import { Chart } from 'chart.js';
 import { WebsocketService } from '../websocket.service';
@@ -198,7 +198,7 @@ stockStatus:string[]=[];
       this.getArticals(this.chosenCountry);
       gapi.load('auth2', function(){
         let auth2 = gapi.auth2.init({
-            client_id: environment.googleAuthApiKey+'.apps.googleusercontent.com'
+            client_id: config.googleAuthApiKey+'.apps.googleusercontent.com'
         });
       });
 
@@ -216,19 +216,19 @@ stockStatus:string[]=[];
     }
 
     getArticals(chosenCountry){
-        // this.HttpClient.get(environment.newsApiHeadlinesUrl+chosenCountry.lable+'&apiKey='+environment.newsApiKey).subscribe((data:any)=>{
+        // this.HttpClient.get(config.newsApiHeadlinesUrl+chosenCountry.lable+'&apiKey='+config.newsApiKey).subscribe((data:any)=>{
         //   this.articles = data.articles;
         // });
     }
 
     getBatchStock(){
-        this.HttpClient.get("https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=MSFT,GOOG,IBM,AAPL,AMZN&apikey="+environment.alphaApiKey).subscribe((data:any)=>{
+        this.HttpClient.get("https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES&symbols=MSFT,GOOG,IBM,AAPL,AMZN&apikey="+config.alphaApiKey).subscribe((data:any)=>{
             this.renderBarChart(data["Stock Quotes"]);
           });
     }
 
     getOneStock(){
-        this.HttpClient.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey="+environment.alphaApiKey).subscribe((data:any)=>{
+        this.HttpClient.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey="+config.alphaApiKey).subscribe((data:any)=>{
             this.renderLineChart(data);
           });
     }

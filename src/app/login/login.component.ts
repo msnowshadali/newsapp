@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { environment } from '../../environments/environment';
+import { config } from '../../config/config';
 import { gapi } from '../../../src/platform.js';
 
 @Component({
@@ -44,7 +44,7 @@ initClient(){
 
     gapi.load('auth2', function(){
         let auth2: any= gapi.auth2.init({
-            client_id: environment.googleAuthApiKey+'.apps.googleusercontent.com'
+            client_id: config.googleAuthApiKey+'.apps.googleusercontent.com'
         });
         auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
     });
