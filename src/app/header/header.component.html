@@ -1,0 +1,26 @@
+<div class="stickyheader">
+  <div class="header">
+    <div class="logo">News Technology Service :: Stock Management</div>
+    <div class="logoutButton">
+        <!-- <button (click)="sendMsg()">Send Message</button> -->
+    </div>
+    <div class="userName">
+      <button [routerLink]="['/logs']">Hi {{userName}}</button>
+    </div>
+  </div>
+</div>
+<div class="dashboardContainer">
+  <div class="leftNavigation">
+    <ul>
+      <li [routerLink]="['/dashboard']"><i class="material-icons">home</i></li>
+      <li><i class="material-icons">developer_board</i></li>
+      <li [routerLink]="['/profile']"><i class="material-icons">person_pin</i></li>
+      <li [routerLink]="['/news']"><i class="material-icons">library_books</i></li>
+      <li><i class="material-icons">euro_symbol</i></li>
+      <li [routerLink]="['/logs']" ><i class="material-icons">settings</i></li>
+      <li class="userProfileOption">
+          <i class="material-icons" (click)="logout()">power_settings_new</i>
+          <img src="{{userImage}}"></li>
+    </ul>
+  </div>
+</div>

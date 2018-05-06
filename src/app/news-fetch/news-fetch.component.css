@@ -1,0 +1,301 @@
+.dashboardContainer{
+    margin-top: 60px;
+}
+
+.leftNavigation{
+    height: 100%;
+    background: #ffffff;
+    width: 70px;
+    position: fixed;
+    /*border-right: 1px solid #ececec;*/
+    box-shadow: 1px 1px 4px -3px #000000;
+}
+
+.leftNavigation ul li{
+    padding: 22px;
+    cursor: pointer;
+}
+
+.userProfileOption img{
+    border-radius: 100%;
+    width: 40px;
+}
+
+.userProfileOption{
+    padding: 16px !important;
+    position: absolute;
+    bottom: 60px;
+}
+
+.leftNavigation ul li:hover{
+    background: #ececec;
+}
+
+.rightContentHolder{
+
+}
+
+.rightContainer {
+    padding: 15px 15px 0px 85px;
+}
+
+.stockNameHolder{
+    display: block;
+    padding: 30px;
+}
+
+.chartDisplay li{
+    display: inline-block;
+    margin: 38px;
+    padding-right: 30px;
+    border-right: 1px solid #CCCCCC;
+}
+
+.sharePriceDisplay ul li{
+    display: block;
+    border-right:none;
+    margin: 20px;
+}
+.chartDisplay li:last-child{
+    padding-right: 0;
+    border-right:none;
+}
+
+.sharePriceDisplay .sharePriceHolder h1{
+    margin: 20px;
+}
+
+.sharePriceDisplay .sharePriceHolder .arrow{
+    vertical-align: middle;
+}
+
+.chartDisplay.sharePriceDisplay{
+    height: auto;
+}
+
+.chartDisplay h1{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chartDisplay.status h2{
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.chartDisplay li h3{
+    font-size: 26px;
+}
+
+.chartDisplay li .stockPriceDate{
+    font-size: 12px;
+}
+
+.chartDisplay li span{
+    float: right;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.OpeningStock span{
+
+}
+
+.LowestStock span{
+
+}
+
+.HighestStock span{
+
+}
+
+.ClosingStock span{
+
+}
+
+.userProfileOption .material-icons{
+    display: none
+}
+
+.userProfileOption:hover .material-icons{
+    display: block;
+    font-size: 27px;
+    position: absolute;
+    color: #ffffff;
+    background: black;
+    border-radius: 100%;
+    padding: 7px;
+}
+
+.sharePriceHolder ul.stockNews li{
+    margin: 0px;
+}
+
+.newsContainer, .newsArticalContainer, .articleContent{
+    margin: 0;
+    padding: 0px;
+}
+
+.newsContainer{
+   
+}
+
+#otherSharesHolder, #otherShares{
+    height: 270px;
+}
+
+
+.userName strong{
+    font-weight: 500;
+}
+
+.userName{
+    position: relative;
+    font-size: 14px;
+    
+}
+
+.userName button{
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 100px;
+    padding: 3px 14px;
+}
+
+h4{
+    display: inline-block;
+    margin-left: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.selectedNewsHeadLine{
+    font-weight: 700;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.contryContainer ul li:hover{
+    background: #dfe4e8;
+    border: 1px solid #d0d2d4;
+    padding: 5px;
+}
+
+.contryContainer ul, .contryContainer ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contryContainer ul{
+    border-right: 1px solid #eceef1;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.contryContainer ul li{
+    padding: 5px;
+    cursor: pointer;
+    width: 160px;
+}
+
+.newsMainContainer{
+    display: flex;
+    margin-top:20px;
+}
+.newsArticalContainer{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    background: #ffffff;
+    border:1px solid #eceef1;
+}
+
+div.articleContent{
+    padding: 0px 10px;
+    line-height: 24px;
+}
+.articleImg{
+    width: 300px;
+}
+
+.newsLink{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+}
+
+.articleImageContainer{
+
+}
+
+.chartDisplay.status{
+    height: 100px;
+}
+
+.chartDisplay{
+    height: 250px;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+
+
+.articleContent{
+}
+
+.articleDescription{
+    font-size: 14px;
+    text-align: justify;
+}
+
+ul.articleContent, ul.articleContent li{
+    list-style: none;
+}
+
+ul.articleContent li{
+    padding: 5px 0px;
+}
+
+li.articlePublishDetails {
+    font-size: 12px;
+}
+
+li.articleTitle {
+    font-size: 22px;
+}
+
+.userProfilePic{
+    width: 40px;
+    border-radius: 100%;
+    position: absolute;
+    right: -50px;
+    top: -11px;
+}
+
+.header{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 20px 25px;
+    background: #ffffff;
+  }
+.logo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.stickyheader{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 0px 7px -3px #000000;
+    /*border-bottom: 1px solid #ececec;*/
+}
