@@ -8,7 +8,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './auth.service'
+import { AuthService } from './auth.service';
+import { HeaderComponent } from './header/header.component'
 
 const appRoutes : Routes = [
   {
@@ -29,7 +30,8 @@ const appRoutes : Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
     background: #ffffff;
     margin-top:200px;
     box-shadow: 0px 0px 7px -3px #000000;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     background: url("../../assets/images/loginBackground.jpg");
 }
 .userText{
@@ -30,7 +30,7 @@
 #signin-button{
     background: #4185f4;
     color: #ffffff;
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     border: none;
     padding: 10px;
     margin-bottom: 70px;
@@ -53,7 +53,7 @@
 
 .googleLogo{
     background: #ffffff;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     width: 20px;
     padding: 5px;
     float: left;

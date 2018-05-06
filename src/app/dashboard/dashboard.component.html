@@ -1,109 +1,51 @@
-<div class="stickyheader">
-  <div class="header">
+<app-header></app-header>
+<div class="rightContainer">
+  <div class="rightContentHolder">
     
-    <div class="logo">News Technology Service</div>
-    <div class="logoutButton">
-        <!-- <button (click)="sendMsg()">Send Message</button> -->
-    </div>
-    <div class="userName">
-      <button>Hello, {{userName}}</button>
-    </div>
+
+ 
+<div class="chartDisplay status">
+  <div class="stockNameHolder">
+    <h1>Stock Participant </h1>
+    <h2>Microsoft Corporation</h2>
   </div>
+  <ul>
+    <li>
+    <h3 class="OpeningStock">Opening <span>{{stockStatus.open}}</span></h3>
+    </li>
+    <li>
+    <h3 class="LowestStock">Lowest <span>{{stockStatus.low}}</span></h3>
+    </li>
+    <li>
+    <h3 class="HighestStock">Highest <span>{{stockStatus.high}}</span></h3>
+  </li>
+  <li>
+    <h3 class="ClosingStock">Closing <span>{{stockStatus.close}}</span></h3>
+  </li>
+</ul>
 </div>
 
-<div class="dashboardContainer">
-  <div class="leftNavigation">
-    <ul>
-      <li><i class="material-icons">home</i></li>
-      <li><i class="material-icons">developer_board</i></li>
-      <li><i class="material-icons">person_pin</i></li>
-      <li><i class="material-icons">library_books</i></li>
-      <li><i class="material-icons">euro_symbol</i></li>
-      <li><i class="material-icons">settings</i></li>
-      <li class="userProfileOption">
-          <i class="material-icons" (click)="logout()">power_settings_new</i>
-          <img src="{{userImage}}"></li>
-    </ul>
-  </div>
-  <div class="rightContainer">
-    <div class="rightContentHolder">
-      
-      <div class="chartDisplay status">
-          <div class="stockNameHolder">
-            <h1>Stock Participant </h1>
-            <h2>Microsoft Corporation</h2>
-          </div>
-          <ul>
-            <li>
-            <h3 class="OpeningStock">Opening <span>{{stockStatus.open}}</span></h3>
-            </li>
-            <li>
-            <h3 class="LowestStock">Lowest <span>{{stockStatus.low}}</span></h3>
-            </li>
-            <li>
-            <h3 class="HighestStock">Highest <span>{{stockStatus.high}}</span></h3>
-          </li>
-          <li>
-            <h3 class="ClosingStock">Closing <span>{{stockStatus.close}}</span></h3>
-          </li>
-        </ul>
-      </div>
-
-      <div class="chartDisplay">
-        <canvas id="myChart"></canvas>
-      </div>
-
-      <div class="chartDisplay sharePriceDisplay">
-        <div class="sharePriceHolder">
-          <h1>Others Shares</h1>
-            <ul class="">
-              <li>Microsoft (MSFT) 33.33 <i class="material-icons arrow">arrow_drop_up</i></li>
-              <li>Google (GOOG) 100.22 <i class="material-icons arrow">arrow_drop_up</i></li>
-              <li>IBM (IBM) <i class="material-icons arrow">arrow_drop_up</i></li>
-              <li>Apple (AAPL) <i class="material-icons arrow">arrow_drop_up</i></li>
-              <li>Amazon (AMZN) <i class="material-icons arrow">arrow_drop_up</i></li>
-            </ul>
-          </div>
-
-          <div class="sharePriceHolder">
-            <div class="otherSharesHolder">
-              <canvas id="otherShares"></canvas>
-            </div>
-            </div>
-      </div>
-    </div>
-  </div>
+<div class="chartDisplay">
+<canvas id="myChart"></canvas>
 </div>
 
-
-
-<!-- <div class="newsMainContainer">
-    <div class="contryContainer">
-      <h4>Choose country</h4>
-        <ul>
-          <li *ngFor="let country of countries" (click)="changeCountry(country)" ><img src="https://newsapi.org/images/flags/{{country.lable}}.svg" width="20px" /> {{country.country}}</li>
-        </ul>
-    </div>
-    
-    <div class="newsArticleContainer">
-
-      <h2 class="selectedNewsHeadLine">Your viewing the news of {{chosenCountry.country}} </h2>
-    <ul class="newsContainer">
-    <li *ngFor="let article of articles" class="newsArticalContainer">
-         <a href="{{article.url}}" class="newsLink">
-          <div class="articleImageContainer">
-                <img src="{{ article.urlToImage ? article.urlToImage : '/assets/images/No_Image_Available.jpg'}}"class="articleImg" alt="{{article.title}}">
-          </div>
-          <div class="articleContent">
-              <ul class="articleContent">
-                <li class="articlePublishDetails">{{article.source.name}} - {{article.publishedAt}}, {{article.author}}</li>
-                <li class="articleTitle">{{article.title}}</li>
-                <li class="articleDescription">{{article.description}}</li>
-              </ul>
-          </div> 
-      </a>
-      </li>
+<div class="chartDisplay sharePriceDisplay">
+<div class="sharePriceHolder">
+  <h1>Others Shares</h1>
+    <ul class="">
+      <li>Microsoft (MSFT) 33.33 {{stockPrice}}<i class="material-icons arrow">arrow_drop_up</i></li>
+      <li>Google (GOOG) 100.22 <i class="material-icons arrow">arrow_drop_up</i></li>
+      <li>IBM (IBM) <i class="material-icons arrow">arrow_drop_up</i></li>
+      <li>Apple (AAPL) <i class="material-icons arrow">arrow_drop_up</i></li>
+      <li>Amazon (AMZN) <i class="material-icons arrow">arrow_drop_up</i></li>
     </ul>
   </div>
-</div> -->
 
+  <div class="sharePriceHolder">
+    <div class="otherSharesHolder">
+      <canvas id="otherShares"></canvas>
+    </div>
+    </div>
+</div>
+
+</div>
