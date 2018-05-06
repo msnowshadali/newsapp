@@ -9,7 +9,10 @@ import { LoginComponent } from './login/login.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service';
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './header/header.component';
+import { UserlogsComponent } from './userlogs/userlogs.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NewsFetchComponent } from './news-fetch/news-fetch.component'
 
 const appRoutes : Routes = [
   {
@@ -19,6 +22,18 @@ const appRoutes : Routes = [
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'logs',
+    component:UserlogsComponent
+  },
+  {
+    path:'news',
+    component:NewsFetchComponent
+  },
+  {
+    path:'profile',
+    component:UserProfileComponent
   },
   { path: '',
     redirectTo: '/login',
@@ -31,7 +46,10 @@ const appRoutes : Routes = [
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserlogsComponent,
+    UserProfileComponent,
+    NewsFetchComponent
   ],
   imports: [
     BrowserModule,
